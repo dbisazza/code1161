@@ -1,4 +1,4 @@
-# CODE1161 General Computing Homepage S1 2018
+# CODE1161 Design Computing Homepage S1 2018
 
 ## Course Outline:
 
@@ -11,17 +11,31 @@ In the same way that being able to hold a pen doesn't make you a writer, being a
 The course will be taught through three sections.
 The first will be becoming proficient in the [Python](https://en.wikipedia.org/wiki/Python_(programming_language)).
 Second is will be a machine learning project which utilises your newfound problem solving and programming skills.
-Third will be a the Open Data Projects: a data analysis and story telling telling task.
+The third section will be the Open Data Project: a data analysis and story telling telling task.
 
 
 ## Course Communication
 
-<p class="reference"><strong>Graham, P.</strong> (2009). <a href="http://paulgraham.com/makersschedule.html"><em>Maker’s Schedule, Manager’s Schedule.</em></a></p>
-<p class="reference"><strong>Case, N.</strong> (2016). <a href="http://ncase.me/simulating/"><em>Simulating The World (In Emoji 😘).</em></a></p>
-<p class="reference"><strong>Davis, D.</strong> (2015). <a href="http://www.architectmagazine.com/technology/why-architects-cant-be-automated_o"><em>Why Architects Can’t Be Automated.</em></a></p>
-<p class="reference"><strong>Doherty, B.</strong> (2015). <a href="https://notionparallax.co.uk/2015/architects-getting-automated"><em>Architects getting automated?</em></a></p>
-<p class="reference"><strong>Noll, A. M.</strong> (1967). <a href="http://noll.uscannenberg.org/Art%20Papers/Creative%20Medium.pdf">The digital computer as a creative medium</a>. IEEE Spectrum, 4(10), 89–95.</p>
+### Course website: 
+[https://design-computing.github.io/code1161/](https://design-computing.github.io/code1161/)
 
+### Course repository
+[https://github.com/Design-Computing/code1161](https://github.com/Design-Computing/code1161)
+
+### Piazza
+- Forum for your questions about the material and the course.
+- Annoucements, updates and my errors will be posted here invitations after I have your emails
+
+### Email
+- Ishaan Varshney: ishaan.varshney@unsw.edu.au
+- Aiden Ray: z3460907@ad.unsw.edu.au
+
+### Slack
+- General chit-chat about comp design and computing.
+
+## Assessments
+### [View in full](./admin/diagrams.html)
+<iframe src="./admin/diagrams.html" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Schedule
 ### Week 1: Welcome to CODE1161 and Your dev environment
@@ -44,29 +58,19 @@ Third will be a the Open Data Projects: a data analysis and story telling tellin
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTH0wxz0Vy61NXaS6g2Nmot2w0qhhOkz1km_2g2TnrLGRyB0OBOlELz6uQ6_Sh5FYWkffY_KKECBpgF/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 #### Lab
+Instructions:
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQED50HjjGZhZ8Nv_9m8dSij1-eVpzuT3jBh3Djd6axm6guCc0H9gWpk9OJwfSIfbIiwGOSPDDz75qG/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-- Software Checklist:
-
-	- Download and Install
-		- python3 from [https://www.anaconda.com/download/](https://www.anaconda.com/download/)
-		- visual studio code [https://www.anaconda.com/download/](https://code.visualstudio.com/download)
-		- github desktop [https://help.github.com/desktop/guides/getting-started-with-github-desktop/installing-github-desktop/](https://help.github.com/desktop/guides/getting-started-with-github-desktop/installing-github-desktop/)
-	
-	- Account Creation:
-		- github: [https://github.com/](https://github.com/)
-		- piazza: by invitiation this week
-		- slack: by invitation this week 
-
-- Instructions:
-	- follow the slides:
-		- <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQED50HjjGZhZ8Nv_9m8dSij1-eVpzuT3jBh3Djd6axm6guCc0H9gWpk9OJwfSIfbIiwGOSPDDz75qG/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 		
-Attempt exercises in scratch if you have finished.
-In the next hour we will familiarise ourselves with each bit of software we have installed and what purpose it serves in the course.
-quick demo of the example program we will be working with over the next few weeks
+Attempt exercises in trinket.io if you have finished.
+
+In the last hour we will familiarise ourselves with each bit of software we have installed and what purpose it serves in the course. After that we will cover how to write your lab books and push them to github.
 
 #### Homework
+- Ensure you have your dev environment set up.
+- In the week1 folder, complete:
+	- exercise1.py
+	- write your journal in README.md
 
 #### Readings
 <dd>
@@ -77,62 +81,35 @@ quick demo of the example program we will be working with over the next few week
 <p class="reference"><strong>Noll, A. M.</strong> (1967). <a href="http://noll.uscannenberg.org/Art%20Papers/Creative%20Medium.pdf">The digital computer as a creative medium</a>. IEEE Spectrum, 4(10), 89–95.</p>
 </dd>
 
-# 2. Programming on your own terms
-## Introduction
-This week you learning how to convert thoughts and ideas into code and thus actions
 
-A Crash course in python syntax
+### Week 2: All of Python in three hours
 
-Scafolding to understand the big four
+#### Introduction
 
+- This week we will obtain an overview of all the components of the Python syntax. Theoretically, you will be able to do __any__ programming task after this week ;-).
 
-## Requirements
-Have your dev environment set up ready to go
+- More details about the development environment.
 
-An acceptance of the anxious feeling in your stomach when you feel lost and overwhelmed.
+- How to ask questions and the three step process to general problem solving.
 
-## Lecture
+#### Requirements
 
-## Lab
+- A portable computer.
+- List of questions from last week's lab
+- Maybe some snacks for the lab. Keep it low GI if you can.
 
-## Related Videos
+#### Lecture
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSJzgHnvLKcSJPt5nfXaz314GprB-fnuoHpLDdafF5Mn4STjs370X7lMdDhn0fZClijt9tDG_lBVOI1/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-## Readings
+#### Lab
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR17tPHvj11C7pOFkuTTxZ_2rcepz0PHUOa8h_wnzTHTRPBoTBBCrgrZVjn5V3NcYDM-s-kmaVOLfzf/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-# 3. Getting there
+#### Homework
+- The first two readings
+- homework exercises in week2 folder
+- 
 
-## Introduction
-This week add to the big project by learning about inputs and outputs
-
-## Requirements
-
-## Lecture
-
-## Lab
-
-## Related Videos
-
-
-## Readings
-### Architecture
-### AI
-### Entreprenuership
-
-# 4. A little bit louder now
-
-## Introduction
-
-## Requirements
-
-## Lecture
-
-## Lab
-
-## Related Videos
-
-
-## Readings
-### Architecture
-### AI
-### Entreprenuership
+#### Readings
+https://automatetheboringstuff.com/#toc: chapters 1-5 Really awesome book
+https://programminghistorian.org/lessons/getting-started-with-github-desktop: Clarification for the github stuff
 
