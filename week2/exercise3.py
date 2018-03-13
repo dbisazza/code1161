@@ -7,7 +7,7 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    pass
+    return (a_number % 2) != 0
 
 
 def fix_it(moves=True, should_move=True):
@@ -21,7 +21,16 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
     """
-    pass
+    if moves:
+        if should_move:
+            return "No Problem"
+        else:
+            return "Duct Tape"
+    else:
+        if should_move:
+            return "WD-40"
+        else:
+            return "No Problem"
 
 
 def loops_1a():
@@ -31,7 +40,11 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    pass
+    listOfStars = []
+    for i in range(10):
+            listOfStars.append("*")
+
+    return listOfStars
 
 
 
@@ -43,7 +56,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    pass
+    symbolList = []
+    for i in range(number_of_items):
+        symbolList.append(symbol)
+
+    return symbolList
 
 
 def loops_2():
@@ -64,7 +81,15 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    pass
+    listOfLists = []
+
+    for i in range(10):
+        listOfStars = []
+        for j in range(10):
+            listOfStars.append("*")
+        listOfLists.append(listOfStars)
+
+    return listOfLists
 
 
 def loops_3():
@@ -88,7 +113,15 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    pass
+    square = []
+
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(str(i))
+        square.append(row)
+
+    return square
 
 
 def loops_4():
@@ -108,7 +141,15 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    pass
+    square = []
+
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(str(j))
+        square.append(row)
+
+    return square
 
 
 def loops_5():
@@ -133,7 +174,15 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    pass
+    square = []
+
+    for i in range(10):
+        row = []
+        for j in range(5):
+            row.append("(i" + str(i) + ", j" + str(j) + ")")
+        square.append(row)
+
+    return square
 
 
 def loops_6():
@@ -156,7 +205,15 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    pass
+    wedge = []
+
+    for i in range(10):
+        row = []
+        for j in range(i+1):
+            row.append(str(j))
+        wedge.append(row)
+
+    return wedge
 
 
 def loops_7():
@@ -180,7 +237,24 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    pass
+    def isPointOnPyramid(i, j):
+        if j == 4:
+            row.append('*')
+        if (j > 4 - (i+1)) & (j < 4 + (i)):
+            row.append('*')
+        else:
+            row.append(' ')
+
+    column = []
+
+    for i in range(5):
+        row = []
+        for j in range(8):
+            isPointOnPyramid(i, j)
+        column.append(row)
+
+    print(column)
+    return column
 
 
 def lp(some_kind_of_list, exercise_name):
