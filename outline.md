@@ -138,3 +138,50 @@ Instructions for week3:
 - homework exercises in week3 folder
 
 
+### Week 4: Dictionaries and File I/O
+
+#### Introduction
+
+This week in the lecture we will build on our hangman game by saving the highest scores and introducing a leader board.
+
+#### Lecture
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ8BkNrDW08ySOr44rQSxrAeht7Avm6PXHclCuAdzUtLn1SMNO8oywMFJI4dKIN3k_rPKbXy0keXUVc/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+#### Lab
+Instructions:
+
+- *pull from upstream/master*
+
+#### Homework
+- ensure you have completed all labs from week 1, 2, 3
+- run through the hangman.py and understand what each line does.
+
+
+### Week 5: More File I/O and the Internet
+
+#### Introduction
+
+This week we will extend on our hangman game by getting the word to guess from the internet.
+
+#### Lecture
+- go over saving and reading from file again
+- what is JSON?
+- reading stuff from the internet with programs
+- recursion
+- [add video link if we successfully manage to record it]
+#### Lab
+Instructions:
+
+- *pull from upstream/master*
+- run week4/setup.py
+- complete week 4 file I/O exercises
+	- run through the `hangman_leaderboard_word_from_internet.py` for some hints.
+- complete week 5 refactoring and recursion exercises
+	- You may need to look at other examples of recursion to develop a fuller understanding of how it works.
+
+#### Homework Due 10/04/2018 @ 12pm
+- ensure you have completed all labs from weeks 4 and 5
+- lab books for both weeks
+- Prepare for the programming exam on 10/04/2018 at 3pm.
+
+

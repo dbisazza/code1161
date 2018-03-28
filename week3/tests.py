@@ -317,7 +317,15 @@ def theTests(path_to_code_to_check="."):
                 # raise ValueError("********\n\nfailed: {}".format(tv))
                 testResults.append(0)
 
+<<<<<<< HEAD
 
+=======
+        # if the binary search is working, show a graph of guess numbers
+        if test(test_binary_search(path_to_code_to_check, 1, 10, 5), ""):
+            # If you aren't Ben, then show the histogram
+            # if os.uname()[1] != "um":  # um is ben's computer
+            print("binary search works!")
+>>>>>>> 54705da028649df1326ec70bc41b0484469a2b54
 
     print("{0}/{1} (passed/attempted)".format(sum(testResults),
                                               len(testResults)))

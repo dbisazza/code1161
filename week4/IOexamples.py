@@ -9,11 +9,11 @@ Using file IO, from the docs:
     to the file is automatically added to the end. 'r+' opens the file for
     both reading and writing. The mode argument is optional; 'r' will be
     assumed if it's omitted."
-https://docs.python.org/2/tutorial/inputoutput.html#reading-and-writing-files
+https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 """
-from __future__ import division
-from __future__ import print_function
+
+
 import json
 
 
@@ -32,10 +32,11 @@ def be_cool_for_ever(name, file_path):
     history_book.write(name + " is cool")
     history_book.close()
 
+# look up what '..' means
+be_cool_for_ever("Ben", "../ben_is_cool.txt")
+be_cool_for_ever("Ben", "ben_is_cool.lol_UR_joking")
 
-be_cool_for_ever("Ben", "ben_is_cool.txt")
-be_cool_for_ever("Ben", "week4/ben_is_cool.lol_UR_joking")
-
+# See where each file was saved
 
 def who_is_cool(file_path):
     """Read a file and print what it says."""

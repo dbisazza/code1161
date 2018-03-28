@@ -39,6 +39,7 @@ def two_step_ranger(start, stop):
     return list(range(start, stop, 2))
 
 
+<<<<<<< HEAD
 def gene_krupa_range(start, stop, even_step, odd_step):
     """Make a range that has two step sizes.
 
@@ -59,6 +60,8 @@ def gene_krupa_range(start, stop, even_step, odd_step):
     return numberList
 
 
+=======
+>>>>>>> 54705da028649df1326ec70bc41b0484469a2b54
 def stubborn_asker(low, high):
     """Ask for a number between low and high until actually given one.
 
@@ -131,7 +134,6 @@ if __name__ == "__main__":
     print("\nloop_ranger", loop_ranger(1, 10, 2))
     print("\nlone_ranger", lone_ranger(1, 10, 3))
     print("\ntwo_step_ranger", two_step_ranger(1, 10))
-    print("\ngene_krupa_range", gene_krupa_range(1, 20, 2, 5))
     print("\nstubborn_asker")
     stubborn_asker(30, 45)
     print("\nnot_number_rejector")
