@@ -50,7 +50,7 @@ def test_not_number_rejector(path):
 
     mockInputs = ["aword", [1, 2, 3], {"an": "object"}, 40]
     try:
-        with Timeout(3):
+        #with Timeout(3):
             with mock.patch('builtins.input', side_effect=mockInputs):
                 return exercise1.not_number_rejector("Testing some values:")
     except Exception as e:
@@ -69,7 +69,7 @@ def test_super_asker(path, low, high):
     neat_range = list(range(low - 25, high + 20, 5))
     mockInputs = dirty_things + neat_range
     try:
-        with Timeout(3):
+        #with Timeout(3):
             with mock.patch('builtins.input', side_effect=mockInputs):
                 return exercise1.super_asker(low, high)
     except Exception as e:
@@ -90,7 +90,7 @@ def test_example_guessingGame(path):
     guesses = list(range(5+1))
     mockInputs = [upperBound] + guesses
     try:
-        with Timeout(3):
+        #with Timeout(3):
             with mock.patch('builtins.input', side_effect=mockInputs):
                 return exercise2.exampleGuessingGame() == "You got it!"
     except Exception as e:
@@ -106,7 +106,7 @@ def test_advanced_guessingGame(path, mockInputs):
         return syntax_error_message(3, e)
 
     try:
-        with Timeout(3):
+        #with Timeout(3):
             with mock.patch('builtins.input', side_effect=mockInputs):
                 return exercise3.advancedGuessingGame() == "You got it!"
     except Exception as e:
@@ -123,10 +123,10 @@ def test_binary_search(path, low, high, actual):
         exercise4 = imp.load_source("exercise4", path)
         BASE2 = 2
         b = None
-        with Timeout(3):
-            b = exercise4.binary_search(low, high, actual)
-            b["WorstCaseO"] = math.log(high - low, BASE2)
-            print("b", b)
+        #with Timeout(3):
+        b = exercise4.binary_search(low, high, actual)
+        b["WorstCaseO"] = math.log(high - low, BASE2)
+        print("b", b)
         if b is not None:
             print("snuck it in")
             return b["tries"] < b["WorstCaseO"]
@@ -317,11 +317,7 @@ def theTests(path_to_code_to_check="."):
                 # raise ValueError("********\n\nfailed: {}".format(tv))
                 testResults.append(0)
 
-        # if the binary search is working, show a graph of guess numbers
-        if test(test_binary_search(path_to_code_to_check, 1, 10, 5), ""):
-            # If you aren't Ben, then show the histogram
-            if os.uname()[1] != "um":  # um is ben's computer
-                vis_binary_search_performance()
+
 
     print("{0}/{1} (passed/attempted)".format(sum(testResults),
                                               len(testResults)))

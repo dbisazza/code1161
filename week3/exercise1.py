@@ -26,7 +26,7 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return(range(start, stop, step))
+    return list(range(start, stop, step))
 
 
 def two_step_ranger(start, stop):
@@ -36,7 +36,7 @@ def two_step_ranger(start, stop):
     Make a range function that always has a step size of 2
     """
 
-    return range(start, stop, 2)
+    return list(range(start, stop, 2))
 
 
 def gene_krupa_range(start, stop, even_step, odd_step):
@@ -68,12 +68,15 @@ def stubborn_asker(low, high):
     message = ("Type a number betewen {} and {}:".format(low, high))
 
     while True:
-        input_number = int(input(message))
-        if low < input_number < high:
-            print("{} is valid".format(input_number))
-            return input_number
-        else:
-            print("{} is not valid".format(input_number))
+        try:
+            input_number = int(input(message))
+            if low < input_number < high:
+                print("{} is valid".format(input_number))
+                return input_number
+        except ValueError:
+            print("not valid")
+        except TypeError:
+            print("not valid")
 
 
 def not_number_rejector(message):
@@ -88,10 +91,11 @@ def not_number_rejector(message):
             input_number = int(input(message))
             print("{} is good".format(input_number))
             return(input_number)
-        except Exception as e:
-            print("Try again ({})".format(e))
+        except ValueError:
+            print("Try again")
+        except TypeError:
+            print("Try again")
 
-    return(input_number)
 
 
 def super_asker(low, high):
@@ -110,10 +114,10 @@ def super_asker(low, high):
                 return(input_number)
             else:
                 print("{} is not valid".format(input_number))
-        except Exception as e:
-            print("Try again ({})".format(e))
-
-    return(input_number)
+        except ValueError:
+            print("Try again")
+        except TypeError:
+            print("Try again")
 
 
 if __name__ == "__main__":
