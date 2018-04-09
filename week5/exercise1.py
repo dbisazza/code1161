@@ -15,6 +15,10 @@ are on top of it, take these comments out. Others won't have comments and
 you'll need to figure out for yourself what to do.
 """
 
+from __future__ import division
+from __future__ import print_function
+import math
+import requests
 
 # This is a terrible function. The rest of the functions in this file do a
 # much better job of what it's trying to do. Once you've has a little look,
@@ -49,7 +53,19 @@ def do_bunch_of_bad_things():
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
 def countdown(message, start, stop, completion_message):
-    pass
+    messageList = []
+    if start < stop:
+        step = 1
+    else:
+        step = -1
+
+    while start != stop:
+        message = '{} {}'.format(message, start)
+        messageList.append(message)
+        start = start + step
+
+    messageList.append(completion_message)
+    return messageList
 
 
 # TRIANGLES
@@ -62,31 +78,41 @@ def countdown(message, start, stop, completion_message):
 # The stub functions are made for you, and each one is tested, so this should
 # hand hold quite nicely.
 def calculate_hypotenuse(base, height):
-    pass
+    hyp = math.sqrt(base**2 + height**2)
+    return hyp
 
 
 def calculate_area(base, height):
-    pass
+    area = (base*height)/2
+    return area
 
 
 def calculate_perimeter(base, height):
-    pass
+    perimeter = base + height + calculate_hypotenuse(base, height)
+    return perimeter
 
 
 def calculate_aspect(base, height):
-    pass
+    if height > base:
+        aspect = 'tall'
+    elif height < base:
+        aspect = 'wide'
+    elif height == base:
+        aspect = 'equal'
+
+    return aspect
 
 
 # Make sure you reuse the functions you've already got
 # Don't reinvent the wheel
 def get_triangle_facts(base, height, units="mm"):
-    return {"area": None,
-            "perimeter": None,
-            "height": None,
-            "base": None,
-            "hypotenuse": None,
-            "aspect": None,
-            "units": None}
+    return {"area": calculate_area(base, height),
+            "perimeter": calculate_perimeter(base, height),
+            "height": height,
+            "base": base,
+            "hypotenuse": calculate_hypotenuse(base, height),
+            "aspect": calculate_aspect(base, height),
+            "units": units}
 
 
 # this should return a multi line string that looks a bit like this:
@@ -136,17 +162,29 @@ def tell_me_about_this_right_triangle(facts_dictionary):
 
     facts = pattern.format(**facts_dictionary)
 
+    if facts_dictionary['aspect'] == "tall":
+        tall_info = tall.format(**facts_dictionary)
+        return (tall_info + facts)
+    elif facts_dictionary['aspect'] == "wide":
+        wide_info = wide.format(**facts_dictionary)
+        return (wide_info + facts)
+    else:
+        equal_info = equal.format(**facts_dictionary)
+        return (equal_info + facts)
+
 
 def triangle_master(base,
                     height,
                     return_diagram=False,
                     return_dictionary=False):
+    dictionary = get_triangle_facts(base, height)
     if return_diagram and return_dictionary:
-        return None
+        return {'diagram': tell_me_about_this_right_triangle(dictionary),
+                'facts': dictionary}
     elif return_diagram:
-        return None
+        return (tell_me_about_this_right_triangle(dictionary))
     elif return_dictionary:
-        return None
+        return {'facts': dictionary}
     else:
         print("You're an odd one, you don't want anything!")
 
@@ -154,26 +192,32 @@ def triangle_master(base,
 def wordy_pyramid():
     import requests
     baseURL = "http://api.wordnik.com/v4/words.json/randomWords?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5&minLength={0}&maxLength={0}&limit=1"
-    pyramid_list = []
-    for i in range(3, 21, 2):
-        url = baseURL.format(i)
-        r = requests.get(url)
-        message = r.json()[0]['word']
-        pyramid_list.append(message)
-    for i in range(20, 3, -2):
-        url = baseURL.format(str(i))
-        r = requests.get(url)
-        message = r.json()[0]['word']
-        pyramid_list.append(message)
-    return pyramid_list
+    pyramid_list1 = list_of_words_with_lengths(range(3, 21, 2))
+    pyramid_list2 = list_of_words_with_lengths(range(20, 3, -2))
+    return (pyramid_list1 + pyramid_list2)
 
 
 def get_a_word_of_length_n(length):
-    pass
+    baseURL = "http://api.wordnik.com/v4/words.json/randomWords?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5&minLength={0}&maxLength={0}&limit=1"
+    
+    try:
+        if length >= 3:
+            url = baseURL.format(str(length))
+            r = requests.get(url)
+            r = r.json()[0]['word']
+            return r
+    except ValueError:
+        pass
+    except TypeError:
+        pass    
 
 
 def list_of_words_with_lengths(list_of_lengths):
-    pass
+    wordList = []
+    for length in list_of_lengths:
+        word = get_a_word_of_length_n(length)
+        wordList.append(word)
+    return wordList
 
 
 if __name__ == "__main__":
