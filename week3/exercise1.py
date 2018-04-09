@@ -39,29 +39,6 @@ def two_step_ranger(start, stop):
     return list(range(start, stop, 2))
 
 
-<<<<<<< HEAD
-def gene_krupa_range(start, stop, even_step, odd_step):
-    """Make a range that has two step sizes.
-
-    make a list that instead of having evenly spaced steps
-    has odd steps be one size and even steps be another.
-    """
-    numberList = []
-    count = 1
-
-    while start <= stop:
-        numberList.append(start)
-        if count % 2 != 0:
-            start += even_step
-        else:
-            start += odd_step
-        count += 1
-
-    return numberList
-
-
-=======
->>>>>>> 54705da028649df1326ec70bc41b0484469a2b54
 def stubborn_asker(low, high):
     """Ask for a number between low and high until actually given one.
 
